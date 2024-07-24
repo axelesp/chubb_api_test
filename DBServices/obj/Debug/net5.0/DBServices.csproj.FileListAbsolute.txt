@@ -1,0 +1,15 @@
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\bin\Debug\net5.0\DBServices.deps.json
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\bin\Debug\net5.0\DBServices.dll
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\bin\Debug\net5.0\ref\DBServices.dll
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\bin\Debug\net5.0\DBServices.pdb
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\bin\Debug\net5.0\Chubb_Api.Models.dll
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\bin\Debug\net5.0\Chubb_Api.Models.pdb
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\obj\Debug\net5.0\DBServices.csproj.AssemblyReference.cache
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\obj\Debug\net5.0\DBServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\obj\Debug\net5.0\DBServices.AssemblyInfoInputs.cache
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\obj\Debug\net5.0\DBServices.AssemblyInfo.cs
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\obj\Debug\net5.0\DBServices.csproj.CoreCompileInputs.cache
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\obj\Debug\net5.0\DBServices.csproj.CopyComplete
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\obj\Debug\net5.0\DBServices.dll
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\obj\Debug\net5.0\ref\DBServices.dll
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\DBServices\obj\Debug\net5.0\DBServices.pdb

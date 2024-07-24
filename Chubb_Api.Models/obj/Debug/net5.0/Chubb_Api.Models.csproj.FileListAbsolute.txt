@@ -1,0 +1,12 @@
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\bin\Debug\net5.0\Chubb_Api.Models.deps.json
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\bin\Debug\net5.0\Chubb_Api.Models.dll
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\bin\Debug\net5.0\ref\Chubb_Api.Models.dll
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\bin\Debug\net5.0\Chubb_Api.Models.pdb
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\obj\Debug\net5.0\Chubb_Api.Models.csproj.AssemblyReference.cache
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\obj\Debug\net5.0\Chubb_Api.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\obj\Debug\net5.0\Chubb_Api.Models.AssemblyInfoInputs.cache
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\obj\Debug\net5.0\Chubb_Api.Models.AssemblyInfo.cs
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\obj\Debug\net5.0\Chubb_Api.Models.csproj.CoreCompileInputs.cache
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\obj\Debug\net5.0\Chubb_Api.Models.dll
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\obj\Debug\net5.0\ref\Chubb_Api.Models.dll
+C:\Users\Axel-Job\source\repos\Chubb_Api_Test\Chubb_Api.Models\obj\Debug\net5.0\Chubb_Api.Models.pdb

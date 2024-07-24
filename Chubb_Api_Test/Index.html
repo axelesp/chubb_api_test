@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>API Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Empleados</h2>
+        <ul id="lsEmpl" />
+    </div>
+    
+    <script>
+        var pathController = 'api/Empleados';
+
+        $(document).ready(function (){
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $('<li>', { text: item }).appendTo($('#lsEmpl'));
+                    });
+                });
+        });
+        
+    </script>
+</body>
+</html>
