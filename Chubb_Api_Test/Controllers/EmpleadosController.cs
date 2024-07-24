@@ -44,14 +44,11 @@ namespace Chubb_Api_Test.Controllers
 
         // POST api/<EmpleadosController>
         [HttpPost]
-        public bool Post([FromBody] Empleado empleado)
+        public string Post([FromForm] Empleado empleado)
         {
             string strDBConn = _config.GetSection("ConnectionStrings").GetSection("DBConnection").Value;
 
-            return true;
-            /*
-            return _empService.InsEmpleado(model.Fotografia, model.Nombre, model.Apellido, model.PuestoId, model.FechaNacimiento, model.FechaContratacion,
-                model.Direccion, model.Telefono, model.CorreoElectronico, model.EstadoId, strDBConn);*/
+            return _empService.InsEmpleado(empleado, strDBConn);
         }
 
         // PUT api/<EmpleadosController>/5

@@ -18,7 +18,7 @@ namespace DBServices.Utililty
             emp = new Empleado
             {
                 Id = Convert.ToInt32(dr["Id"]),
-                Fotografia = (DBNull.Value == dr["Fotografia"]) ? (byte)0 : Convert.ToByte(dr["Fotografia"]),
+                Fotografia = (DBNull.Value == dr["Fotografia"]) ? null : (byte[])dr["Fotografia"],
                 Nombre = dr["Nombre"].ToString(),
                 Apellido = dr["Apellido"].ToString(),
                 PuestoId = int.Parse(dr["PuestoId"].ToString()),

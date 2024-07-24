@@ -22,21 +22,28 @@ namespace DBServices.Context
         {
             //connString = _dbConn.ObtConexionDB();
             connString = conn.ObtConexionDB();
-            string result = "";
+            string result = "1";
             using (var sqlConnection = new SqlConnection(connString))
             {
                 using (var command = sqlConnection.CreateCommand())
                 {
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.CommandText = procName;
-                    if (paramters != null)
+                    try
                     {
-                        command.Parameters.AddRange(paramters);
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        command.CommandText = procName;
+                        if (paramters != null)
+                        {
+                            command.Parameters.AddRange(paramters);
+                        }
+                        sqlConnection.Open();
+                        var ret = command.ExecuteScalar();
+                        if (ret != null)
+                            result = Convert.ToString(ret);
                     }
-                    sqlConnection.Open();
-                    var ret = command.ExecuteScalar();
-                    if (ret != null)
-                        result = Convert.ToString(ret);
+                    catch(Exception ex)
+                    {
+                        result = ex.Message + Environment.NewLine + " -Trace: " + ex.StackTrace;
+                    }
                 }
             }
             return result;

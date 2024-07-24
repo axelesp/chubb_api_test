@@ -9,7 +9,7 @@ namespace Chubb_Api_Test.Models
     {
         public int Id { get; set; }
 
-        public byte Fotografia { get; set; }
+        public byte[] Fotografia { get; set; }
 
         public string Nombre { get; set; }
         public string Apellido { get; set; }

@@ -7,6 +7,7 @@
 
 <html>
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>View</title>
 
@@ -33,7 +34,7 @@
                 <span>Dirección: </span><input type="text" id="txtDir" /><br />
                 <span>Telefono: </span><input type="text" id="txtTel" /><br />
                 <span>Correo: </span><input type="text" id="txtEmial" /><br />
-                <span>Estado:</span><input type="number" id="chkEstado" /><br />
+                <span>Activo:</span><input type="checkbox" id="chkEstado" /><br />
                 <button id="btnInsertar" class="btm btn-default">Enviar</button>
                 <hr />
                 <span>Eliminar:&nbsp;</span> <input type="text" id="txtEliminaId" /> <button class="btm btn-default" id="btnEliminar" value="">Eliminar</button>
@@ -44,7 +45,7 @@
                 </div>
 
                 <script>
-                    var uriController = 'Empleados';
+                    var uriController = '/Empleados';
 
                     $(document).ready(function () {
                         $("#lsEmpl").empty();
@@ -69,8 +70,9 @@
                                 });
                         });
 
-                            $("#btnInsertar").click(function () {
-                                let Foto = 0; //$("#elFoto").val();
+                        $("#btnInsertar").click(function () {
+                            $("#lsEmpl").empty();
+                                let Foto = null;
                                 let nombre = $("#txtNombre").val();
                                 let apellido = $("#txtApellido").val();
                                 let Puesto = $("#puesto").val();
@@ -79,17 +81,21 @@
                                 let direccion = $("#txtDir").val();
                                 let telefono = $("#txtTel").val();
                                 let correoE = $("#txtEmial").val();
-                                let estado = $("#chkEstado").val();
+                                let estado = $("#chkEstado").val() == "on" ? 1 : 0;
 
                                 let d = {
-                                    Fotografia: Foto, Nombre: nombre, Apellido: apellido, Puesto: Puesto, FechaNacimiento: FechNac,
-                                    FechaConttratacion: FechCont, Direccion: direccion, Teñefono: telefono, CorreoElectronico: correoE, Estado: estado
+                                    Fotografia: Foto, Nombre: nombre, Apellido: apellido, PuestoId: Puesto, FechaNacimiento: FechNac,
+                                    FechaContratacion: FechCont, Direccion: direccion, Telefono: telefono, CorreoElectronico: correoE, EstadoId: estado
                                 };
 
                                 $.post(uriController, d, function (result, status) {
-                                    alert("Insertado");
-                                    //$('<li>', { text: ('Empleado Insertado') }).appendTo($('#lsEmpl'));
-                                });
+                                    alert("Empleado Insertado");
+                                    let texto = "Empleado Insertado";
+                                    if (isNaN(result))
+                                        texto = result;
+
+                                    $('<li>', { text: (texto) }).appendTo($('#lsEmpl'));
+                                }), "json";
                             });
 
                             /*$("#btnElimina").click(function () {

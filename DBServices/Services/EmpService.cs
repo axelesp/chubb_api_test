@@ -42,34 +42,26 @@ namespace DBServices.Context
             return utilEmp.ObtEmpleadosLista(drEmp);
         }
 
-        public bool InsEmpleado(byte? Fotografia, string Nombre, string Apellido, int puestoId, DateTime FechaNacimiento, DateTime FechaContratacion,
-            string Direccion, string Telefono, string CorreoElectronico, int Estado, string dbConn)
+        public string InsEmpleado(Empleado empleado, string dbConn)
         {
             spName = "spInsEmpleado";
 
             SqlParameter[] param = { 
-                new SqlParameter("@Fotografia", Fotografia),
-                new SqlParameter("@Nombre", Nombre),
-                new SqlParameter("@Apellido", Apellido),
-                new SqlParameter("@PuestoId", puestoId),
-                new SqlParameter("@FechaNac", FechaNacimiento),
-                new SqlParameter("@FechaCont", FechaContratacion),
-                new SqlParameter("@Dir", Direccion),
-                new SqlParameter("@Telefono", Telefono),
-                new SqlParameter("@CorreoE", CorreoElectronico),
-                new SqlParameter("@EstadpId", Estado)
+                new SqlParameter("@Fotografia", empleado.Fotografia),
+                new SqlParameter("@Nombre", empleado.Nombre),
+                new SqlParameter("@Apellido", empleado.Apellido),
+                new SqlParameter("@PuestoId", empleado.PuestoId),
+                new SqlParameter("@FechaNac", empleado.FechaNacimiento),
+                new SqlParameter("@FechaCont", empleado.FechaContratacion),
+                new SqlParameter("@Dir", empleado.Direccion),
+                new SqlParameter("@Telefono", empleado.Direccion),
+                new SqlParameter("@CorreoE", empleado.CorreoElectronico),
+                new SqlParameter("@EstadoId", empleado.EstadoId)
             };
 
             string result = sqlHelper.EjecutaSPScalar(spName, dbConn, param);
 
-            int intResult = 0;
-            if (!int.TryParse(result, out intResult))
-                return false;
-
-            if (intResult == 1)
-                return true;
-            else
-                return false;
+            return result;
         }
 
         public string DeleteEmpleado(int empId, string dbConn)
@@ -84,8 +76,7 @@ namespace DBServices.Context
     {
         public Empleado ObtEmpleadoPorId(string dbConn, int empId);
         public List<Empleado> GetEmpleados(string dbConn);
-        public bool InsEmpleado(byte? Fotografia, string Nombre, string Apellido, int puestoId, DateTime FechaNacimiento, DateTime FechaContratacion,
-            string Direccion, string Telefono, string CorreoElectronico, int Estado, string dbConn);
+        public string InsEmpleado(Empleado empleado, string dbConn);
         public string DeleteEmpleado(int empId, string dbConn);
     }
 }
