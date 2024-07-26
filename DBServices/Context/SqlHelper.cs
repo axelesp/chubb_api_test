@@ -36,9 +36,9 @@ namespace DBServices.Context
                             command.Parameters.AddRange(paramters);
                         }
                         sqlConnection.Open();
-                        var ret = command.ExecuteScalar();
-                        if (ret != null)
-                            result = Convert.ToString(ret);
+                        var reS = command.ExecuteScalar();
+                        if (reS != null)
+                            result = Convert.ToString(reS);
                     }
                     catch(Exception ex)
                     {

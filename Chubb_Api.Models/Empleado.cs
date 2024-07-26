@@ -13,6 +13,7 @@ namespace Chubb_Api_Test.Models
 
         public string Nombre { get; set; }
         public string Apellido { get; set; }
+
         public int PuestoId { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public DateTime FechaContratacion { get; set; }

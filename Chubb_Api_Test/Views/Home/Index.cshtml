@@ -81,24 +81,29 @@
                                 let direccion = $("#txtDir").val();
                                 let telefono = $("#txtTel").val();
                                 let correoE = $("#txtEmial").val();
-                                let estado = $("#chkEstado").val() == "on" ? 1 : 0;
+                                let estado = $("#chkEstado").is(':checked') ? 1 : 0;
 
                                 let d = {
                                     Fotografia: Foto, Nombre: nombre, Apellido: apellido, PuestoId: Puesto, FechaNacimiento: FechNac,
                                     FechaContratacion: FechCont, Direccion: direccion, Telefono: telefono, CorreoElectronico: correoE, EstadoId: estado
                                 };
 
-                                $.post(uriController, d, function (result, status) {
-                                    alert("Empleado Insertado");
+                                $.post(uriController, d, function (result, status, xhr) {
                                     let texto = "Empleado Insertado";
-                                    if (isNaN(result))
-                                        texto = result;
-
+                                    if (status == "success") {
+                                        if (isNaN(result))
+                                            texto = result;
+                                        else
+                                            alert(texto);
+                                    }
+                                    else {
+                                        texto = "Error: " + xhr.status;
+                                    }
                                     $('<li>', { text: (texto) }).appendTo($('#lsEmpl'));
                                 }), "json";
                             });
 
-                            /*$("#btnElimina").click(function () {
+                            $("#btnElimina").click(function () {
                                 let eId = $("#txtEliminaId").val();
                                 $.ajax({
                                     url: "Empleados/Delete",
@@ -109,7 +114,7 @@
                                         $('<li>', { text: ('Error: ' + err.status + " - " + err.statusText) }).appendTo($('#lsEmpl'));
                                     }
                                     });
-                            });*/
+                            });
                     });
 
                     function formatItem(item) {

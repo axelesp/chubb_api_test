@@ -46,7 +46,7 @@ namespace DBServices.Context
         {
             spName = "spInsEmpleado";
 
-            SqlParameter[] param = { 
+            SqlParameter[] param = {
                 new SqlParameter("@Fotografia", empleado.Fotografia),
                 new SqlParameter("@Nombre", empleado.Nombre),
                 new SqlParameter("@Apellido", empleado.Apellido),
@@ -54,7 +54,7 @@ namespace DBServices.Context
                 new SqlParameter("@FechaNac", empleado.FechaNacimiento),
                 new SqlParameter("@FechaCont", empleado.FechaContratacion),
                 new SqlParameter("@Dir", empleado.Direccion),
-                new SqlParameter("@Telefono", empleado.Direccion),
+                new SqlParameter("@Telefono", empleado.Telefono),
                 new SqlParameter("@CorreoE", empleado.CorreoElectronico),
                 new SqlParameter("@EstadoId", empleado.EstadoId)
             };
